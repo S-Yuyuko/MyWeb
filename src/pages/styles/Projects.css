@@ -1,0 +1,211 @@
+/* src/components/styles/Projects.css */
+.projects-container {
+  display: flex;
+  margin-top: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.projects-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Full-screen welcome section */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--lighter-background);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.welcome-section.hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--body-text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--body-text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--body-background);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--body-text);
+}
+
+/* Type selection styling */
+.type-selection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.type-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.type-option.selected .type-radio {
+  background-color: var(--link-color);
+}
+
+.type-radio {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  transition: background-color 0.3s;
+}
+
+/* Error message styling */
+.error-message {
+  color: #f44336;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Material input styling */
+.material-input {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.material-input input,
+.material-input textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+  background: transparent;
+  padding: 0.5rem 0;
+  font-size: 1.25rem; /* Increased font size */
+  color: var(--body-text);
+  transition: border-color 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.material-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0;
+  pointer-events: none;
+  transition: transform 0.2s, font-size 0.2s, color 0.2s;
+  transform-origin: left;
+  font-size: 1rem;
+  color: var(--border-color);
+}
+
+.material-input input:focus ~ label,
+.material-input input:not(:placeholder-shown) ~ label,
+.material-input textarea:focus ~ label,
+.material-input textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(-1.5rem) scale(0.75);
+  color: var(--link-color);
+}
+
+.material-input input:focus,
+.material-input textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--link-color);
+}
+
+.save-button,
+.delete-button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--link-color);
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.save-button:hover,
+.delete-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+  color: #f44336;
+}
+
+.delete-button:hover {
+  background-color: #f44336;
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.add-project-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.add-project-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--link-color);
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.add-project-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

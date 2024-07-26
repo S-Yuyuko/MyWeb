@@ -1,0 +1,59 @@
+/* src/components/Contact.css */
+.contact-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .icon-link {
+    color: var(--link-color);
+    transition: color 0.3s;
+    position: relative;
+  }
+  
+  .icon-link:hover {
+    color: var(--link-hover-color);
+  }
+  
+  .dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+  }
+  
+  .dialog-content {
+    width: 500px;
+    background: var(--body-background);
+    color: var(--body-text);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--body-text);
+  }
+  
+  .close-button:hover {
+    color: var(--link-hover-color);
+  }
+  

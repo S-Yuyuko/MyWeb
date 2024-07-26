@@ -1,0 +1,250 @@
+/* src/components/styles/ProjectDetails.css */
+.project-details {
+  flex: 1;
+  margin: 0.5rem;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-size: 24px;
+  border-radius: 8px;
+  background-color: var(--lighter-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Material Input Styles */
+.material-input {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.material-input input,
+.material-input textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--body-background);
+  color: var(--body-text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+}
+
+.material-input input:focus,
+.material-input textarea:focus {
+  outline: none;
+  border-color: var(--link-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.material-input label {
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  background-color: var(--body-background);
+  padding: 0 0.25rem;
+  color: var(--link-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: transform 0.3s, font-size 0.3s;
+}
+
+.material-input input:not(:placeholder-shown) + label,
+.material-input textarea:not(:placeholder-shown) + label,
+.material-input input:focus + label,
+.material-input textarea:focus + label {
+  transform: translateY(-1.5rem) scale(0.75);
+}
+
+
+/* Save and Delete Button Styles */
+.save-button,
+.delete-button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--link-color);
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.save-button:hover,
+.delete-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-media {
+  margin-top: 2rem;
+}
+
+.project-media h3 {
+  font-size: 1.5rem;
+  color: var(--body-text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.media-item {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+  object-fit: cover;
+}
+
+.media-item img:hover,
+.media-item video:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.delete-media-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.delete-media-button:hover {
+  background-color: #e53935;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.media-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.media-modal-content {
+  position: relative;
+  background-color: var(--body-background);
+  padding: 0.1rem;
+  border-radius: 10px;
+  width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* No Project Selected Styles */
+.no-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--link-color);
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  flex: 1;
+  margin: 1rem;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 24px;
+  border-radius: 8px;
+  background-color: var(--lighter-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Type Selection Styles */
+.type-selection {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--body-text);
+  position: relative;
+}
+
+.type-radio {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  position: relative;
+}
+
+.type-option input[type="radio"] {
+  display: none;
+}
+
+.type-option.selected .type-radio::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--link-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* No Media Available Styles */
+.no-media-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--border-color);
+  font-size: 4rem;
+  opacity: 0.5;
+  text-align: center;
+}

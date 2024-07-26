@@ -1,0 +1,262 @@
+/* src/pages/Home.css */
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-background);
+  color: var(--body-text);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.links-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--body-background);
+  color: var(--body-text);
+  text-align: center;
+}
+
+.links-section h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  color: var(--body-text);
+  text-decoration: none;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.link-button .icon {
+  margin-right: 0.5rem;
+}
+
+.link-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button {
+  padding: 0.75rem 2rem;
+  width: 20%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.edit-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact component styles */
+.contact-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.contact-container a {
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
+.contact-container a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Editor section */
+.editor-section {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--body-background);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.material-input {
+  position: relative;
+  width: 100%;
+}
+
+.material-input input,
+.material-input textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--body-background);
+  color: var(--body-text);
+  transition: border-color 0.3s;
+}
+
+.material-input input:focus,
+.material-input textarea:focus {
+  border-color: var(--link-color);
+  outline: none;
+}
+
+.material-input label {
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+  background-color: var(--body-background);
+  padding: 0 0.25rem;
+  color: var(--link-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  pointer-events: none;
+  transition: transform 0.3s, font-size 0.3s;
+}
+
+.material-input input:not(:placeholder-shown) + label,
+.material-input textarea:not(:placeholder-shown) + label,
+.material-input input:focus + label,
+.material-input textarea:focus + label {
+  transform: translateY(-1.5rem) scale(0.75);
+}
+
+.upload-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.upload-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-editor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.slider-image-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.slider-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+
+.save-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.save-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--body-background);
+  max-height: 90%;
+  min-height: 80%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}

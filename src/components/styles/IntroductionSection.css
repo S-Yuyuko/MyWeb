@@ -1,0 +1,180 @@
+/* Introduction Section Styles */
+.introduction-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--body-background);
+  color: var(--body-text);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  z-index: 0;
+}
+
+.introduction-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.introduction-text {
+  max-width: 600px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.introduction-text h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--header-text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.introduction-text p {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  color: var(--body-text);
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Editor Styles */
+.editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  background-color: var(--lighter-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.editor input,
+.editor textarea,
+.editor input[type="file"] {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  transition: border-color 0.3s;
+  background-color: var(--body-background);
+  color: var(--body-text);
+}
+
+.editor input:focus,
+.editor textarea:focus,
+.editor input[type="file"]:focus {
+  border-color: var(--link-color);
+  outline: none;
+}
+
+.editor input[type="file"] {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.editor input[type="file"]::file-selector-button {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--link-color);
+  color: var(--body-background);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+}
+
+.editor input[type="file"]::file-selector-button:hover {
+  background-color: darken(var(--link-color), 10%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-editor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.slider-image-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.slider-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+
+.save-button,
+.upload-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.save-button:hover,
+.upload-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cancel Button Styles */
+.cancel-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1rem;
+}
+
+.cancel-button:hover {
+  background-color: var(--link-color);
+  color: var(--body-background);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
